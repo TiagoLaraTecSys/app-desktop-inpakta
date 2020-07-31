@@ -9,7 +9,7 @@ function createWindow() {
         widh: 1024,
         height: 780,
         webPreferences: {
-            nodeIntegration: false;
+            nodeIntegration: false
         }
     });
 
