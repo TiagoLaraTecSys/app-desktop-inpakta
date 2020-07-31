@@ -1,0 +1,23 @@
+/**
+ *  Define a base da fonte que pretende utilizar.
+ *  @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+ * @atom Media Import Fonts
+ * @section Configurações > Font
+ */
+
+$font-size: 16;
+
+/**
+*  Define a base da fonte que pretende utilizar (valores ja são convertidos em rem).
+ * @mixin Font Size
+ * @section Font
+ * @param $size-value Seta o tamanho da fonte definido na variavel '$font-size'
+ * @example
+ *   @include font-size($font-size);
+ *   @include font-size(16);
+ */
+
+@mixin font-size($size-value: $font-size) {
+	font-size: $size-value + px;
+	font-size: ($size-value / $font-size) + rem;
+}

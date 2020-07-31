@@ -1,0 +1,86 @@
+/**
+*  Define os estilos e regras para os botões, assim como, :hover, :focus, :active. Lembre-se de criar e ajustar a base de cores em _variables.scss, conforme seu projeto.
+ * @mixin Button Variant Colors
+ * @section Button
+ * @param $color cor para o texto interno 'color'
+ * @param $background cor base do bloco 'background-color'
+ * @param $border cor da borda 'border-color'
+ * @example
+ *   @include button-variant($c-white, $c-ciano, $c-dark);
+ */
+
+@mixin button-variant($color, $background, $border) {
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+
+	&:focus,
+	&.focus {
+		color: $color;
+		background-color: darken($background, 10%);
+		border-color: darken($border, 25%);
+	}
+
+	&:hover {
+		color: $color;
+		background-color: darken($background, 10%);
+		border-color: darken($border, 12%);
+	}
+
+	&:active,
+	&.active {
+		color: $color;
+		background-color: darken($background, 10%);
+		border-color: darken($border, 12%);
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: $color;
+			background-color: darken($background, 17%);
+			border-color: darken($border, 25%);
+		}
+	}
+
+	&:active,
+	&.active {
+		background-image: none;
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: $background;
+			border-color: $border;
+		}
+	}
+}
+
+/**
+*  Define o tamanho do botão.
+ * @mixin Buttons Size
+ * @section Button
+ * @param $padding-vertical Define o preenchimento vertical
+ * @param $padding-horizontal Define o preenchimento horizontal
+ * @param $font-size Define o tamanho de fonte padrão
+ * @param $line-height Define a altura da linha
+ * @param $border-radius Define o arredondamento do botão.
+ * @example
+ *   @include button-size($grid-gutter, $grid-gutter, $font-size, 1.2, 2rem);
+ */
+
+@mixin button-size(
+	$padding-vertical,
+	$padding-horizontal,
+	$font-size,
+	$line-height,
+	$border-radius
+) {
+	padding: $padding-vertical $padding-horizontal;
+	font-size: $font-size;
+	line-height: $line-height;
+	border-radius: $border-radius;
+}

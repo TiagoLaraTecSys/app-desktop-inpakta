@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/// Provides an easy way to include a clearfix for containing floats.
+
+/**
+*  Ajusta com pseudo elemento o conteudo flutuante, para evitar quebras de layout.
+ * @mixin Clearfix
+ * @section Clearfix
+ * @example
+ *   @include clearfix();
+ */
+
+@mixin clearfix() {
+	&::before,
+	&::after {
+		content: ' ';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}

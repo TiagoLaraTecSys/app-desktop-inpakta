@@ -1,0 +1,29 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: #000000;
+
+	h1 {
+		color: #00cca3;
+		font-size: 24px;
+		font-weight: bold;
+		@include media('>=tablet') {
+			font-size: rem(45);
+		}
+	}
+
+	nav {
+		ul {
+			list-style: none;
+			display: flex;
+
+			li {
+				a {
+					text-decoration: none;
+					color: #00cca3;
+				}
+			}
+		}
+	}
+
+}

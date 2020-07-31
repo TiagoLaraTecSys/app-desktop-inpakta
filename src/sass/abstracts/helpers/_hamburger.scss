@@ -1,0 +1,17 @@
+/**
+ *  Configurações base para o estilo do menu responsivo / mobile. Caso seja inserido uma nova configuração, documentar nos 'modifiers'
+ * @atom Menu Hamburguer
+ * @section Elementos > Helpers
+ * @modifiers
+*   $hamburger-padding-x(y) Define o tamanho do Menu
+ *  $hamburger-layer-color Define a cor do Menu
+ */
+
+$hamburger-hover-opacity: 1 !default;
+$hamburger-layer-width: 22px !default;
+$hamburger-layer-height: 3px !default;
+$hamburger-layer-spacing: 2px !default;
+$hamburger-padding-x: 0 !default;
+$hamburger-padding-y: 0 !default;
+
+@import 'hamburgers';

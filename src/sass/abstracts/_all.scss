@@ -1,0 +1,11 @@
+/*
+Reúne todas as ferramentas Sass e auxiliares utilizados em todo o projeto.
+Cada variável global, função, mixin e espaço reservado deve ser colocado aqui.
+*/
+
+@import 'variables';
+@import 'mixins/all';
+@import 'helpers/all';
+@import 'colors';
+@import 'typo';
+@import 'animations';

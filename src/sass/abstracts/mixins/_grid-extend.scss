@@ -1,0 +1,176 @@
+@mixin col-base() {
+	box-sizing: border-box;
+	padding: 0 $grid-gutter;
+}
+
+@mixin generate-cols($breakpoint) {
+	@include cols($breakpoint);
+	@include cols-offset($breakpoint);
+	@include cols-position($breakpoint);
+}
+
+@mixin cols($breakpoint) {
+	@for $i from 0 through $qtd-col {
+		$size: $i / $qtd-col * 100%;
+		@if $i == 0 {
+			%col-#{$breakpoint} {
+				@include col-base;
+				flex-basis: 0;
+				flex-grow: 1;
+				max-width: 100%;
+			}
+		} @else {
+			%col-#{$breakpoint}-#{$i} {
+				@include col-base;
+				flex-basis: $size;
+				max-width: $size;
+			}
+		}
+	}
+}
+
+@mixin cols-offset($breakpoint) {
+	@for $i from 0 through $qtd-col {
+		$size: $i / $qtd-col * 100%;
+		$margin: $size;
+		@if $size == 0% {
+			$margin: 0;
+		}
+
+		%offset-#{$breakpoint}-#{$i} {
+			@include col-base;
+
+			@if $margin != 100% {
+				margin-left: $margin;
+			}
+		}
+	}
+}
+
+@mixin cols-position($breakpoint) {
+	%start-#{$breakpoint} {
+		justify-content: flex-start;
+		text-align: start;
+	}
+
+	%center-#{$breakpoint} {
+		justify-content: center;
+		text-align: center;
+	}
+
+	%end-#{$breakpoint} {
+		justify-content: flex-end;
+		text-align: end;
+	}
+
+	%top-#{$breakpoint} {
+		align-items: flex-start;
+	}
+
+	%middle-#{$breakpoint} {
+		align-items: center;
+	}
+
+	%bottom-#{$breakpoint} {
+		align-items: flex-end;
+	}
+
+	%stretch-#{$breakpoint} {
+		align-items: stretch;
+	}
+
+	%around-#{$breakpoint} {
+		justify-content: space-around;
+	}
+
+	%between-#{$breakpoint} {
+		justify-content: space-between;
+	}
+
+	%first-#{$breakpoint} {
+		order: -1;
+	}
+
+	%last-#{$breakpoint} {
+		order: 1;
+	}
+
+	%order-#{$breakpoint} {
+		order: 0;
+	}
+}
+
+%container-fluid {
+	margin: 0 auto;
+}
+
+%container {
+	margin: 0 auto;
+	width: auto;
+}
+
+%row {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	margin: {
+		left: -$grid-gutter;
+		right: -$grid-gutter;
+	}
+
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+%col.reverse {
+	flex-direction: column-reverse;
+}
+
+@include generate-cols(xs);
+
+@media only screen and(min-width: $ph) {
+	%container-ph {
+		width: $ph;
+	}
+
+	@include generate-cols(ph);
+}
+
+@media only screen and(min-width: $sm) {
+	%container-sm {
+		width: $sm;
+	}
+
+	%container {
+		@extend %container-sm;
+	}
+
+	@include generate-cols(sm);
+}
+
+@media only screen and(min-width: $md) {
+	%container-md {
+		width: $md;
+	}
+
+	%container {
+		@extend %container-md;
+	}
+
+	@include generate-cols(md);
+}
+
+@media only screen and(min-width: $lg) {
+	%container-lg {
+		width: $lg;
+	}
+
+	%container {
+		@extend %container-lg;
+	}
+
+	@include generate-cols(lg);
+}

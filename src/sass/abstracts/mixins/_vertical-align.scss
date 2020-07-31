@@ -1,0 +1,30 @@
+/*
+Allows vertical centering of elements with unknown dimensions.
+*/
+
+/**
+*  Define o alinhamento vertical de elementos com dimensões desconhecidas.
+ * @mixin Vertical Align
+ * @section Vertical Align
+ * @example
+ *  @include vertical-align()
+ */
+
+@mixin vertical-align() {
+	&:after {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+/*
+The element to be vertically centred.
+*/
+@mixin vertical-align__child() {
+	&:after {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

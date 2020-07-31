@@ -1,0 +1,163 @@
+// ==========================================================================
+// Base Classes
+// ==========================================================================
+
+* {
+	box-sizing: inherit;
+
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+html {
+	@include antialiased(true);
+	box-sizing: border-box;
+	color: $c-base-text;
+	font: {
+		family: map-deep-get($font, 'family', 'f-default');
+		size: $root-em;
+		smooth: always;
+	}
+	line-height: 1.5;
+	margin: 0;
+	min-height: 100%;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	background: $c-base-bg;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+select,
+button,
+textarea,
+input[type='text'],
+input[type='email'] input[type='number'] {
+	font: {
+		family: map-deep-get($font, 'family', 'f-default');
+	}
+}
+
+button {
+	border: {
+		radius: 0;
+		width: 0;
+	}
+	cursor: pointer;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+img[data-original] {
+	opacity: 0;
+	transition: opacity 0.2 ease;
+}
+
+// svg path {
+// 	fill: inherit;
+// }
+
+// Fixes Firefox anomaly on Lazyloading
+@-moz-document url-prefix() {
+	img:-moz-loading {
+		visibility: hidden;
+	}
+}
+
+.wrapper {
+	overflow-x: hidden;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::selection {
+	background: {
+		color: $c-gray13;
+	}
+	color: $c-black;
+	text-shadow: none;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/*
+ * Remove Arrow Default Summary
+ */
+::-webkit-details-marker {
+	display: none;
+}
+
+.hidden-md {
+  display: block;
+  @include media('>=desktop'){
+    display: none;
+  }
+
+}
+.hidden-xs {
+  display: block;
+  @include media('<desktop'){
+    display: none;
+  }
+
+}

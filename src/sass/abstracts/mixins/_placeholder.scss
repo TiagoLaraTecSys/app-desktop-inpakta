@@ -1,0 +1,19 @@
+/**
+*  Gera um método para adicionar / alterar propriedades de estilo internamente, aos elementos definidos com placeholder.
+ * @mixin Placeholder Content
+ * @section Placeholder
+ * @deprecated
+ * @example
+ *  @include placeholder {
+ *   color: $c-ciano;
+ *  }
+ */
+
+@mixin placeholder {
+	$placeholders: ':-webkit-input' ':-moz' '-moz' '-ms-input';
+	@each $placeholder in $placeholders {
+		&:#{$placeholder}-placeholder {
+			@content;
+		}
+	}
+}

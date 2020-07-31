@@ -1,0 +1,18 @@
+/*
+Base Estructure Headings
+*/
+$headings: (
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+);
+
+@each $heading in $headings {
+	#{$heading} {
+		@include font-size($h-size);
+		$h-size: $h-size - 2;
+	}
+}

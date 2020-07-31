@@ -1,0 +1,38 @@
+$f-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Montserrat, Helvetica,
+	Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$f-heading: "Inter", sans-serif;
+$f-heading1:"Archivo", sans-serif;
+$f-default: "Roboto", sans-serif;
+
+$font: (
+	family:
+		(
+			f-default: $f-default,
+			f-heading: $f-heading,
+			f-heading1:$f-heading1,
+			f-additional: $f-default
+		),
+	weight:
+		(
+			fw-thin: 100,
+			fw-extralight: 200,
+			fw-light: 300,
+			fw-regular: 400,
+			fw-medium: 500,
+			fw-semibold: 600,
+			fw-bold: 700,
+			fw-extrabold: 800,
+			fw-black: 900
+		)
+);
+
+$fw-thin: map-deep-get($font, "weight", "fw-thin");
+$fw-extralight: map-deep-get($font, "weight", "fw-extralight");
+$fw-light: map-deep-get($font, "weight", "fw-light");
+$fw-regular: map-deep-get($font, "weight", "fw-regular");
+$fw-medium: map-deep-get($font, "weight", "fw-medium");
+$fw-semibold: map-deep-get($font, "weight", "fw-semibold");
+$fw-bold: map-deep-get($font, "weight", "fw-bold");
+$fw-extrabold: map-deep-get($font, "weight", "fw-extrabold");
+$fw-black: map-deep-get($font, "weight", "fw-black");

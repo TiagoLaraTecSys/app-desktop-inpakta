@@ -1,0 +1,43 @@
+@mixin zdepth($zdepth) {
+	@if not index(0 1 2 3 4 5, $zdepth) {
+		@error '`#{$zdepth}` is not a valid value for the `$zdepth` argument in ' +
+					 'the `zdepth` mixin.';
+	} @else if $zdepth == 0 {
+		box-shadow: none;
+	} @else if $zdepth == 1 {
+		@if map-get($depth, 'z-1') {
+			box-shadow: unquote(map-get($depth, 'z-1'));
+		} @else {
+			box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px,
+				rgba(0, 0, 0, 0.12) 0px 1px 4px;
+		}
+	} @else if $zdepth == 2 {
+		@if map-get($depth, 'z-2') {
+			box-shadow: unquote(map-get($depth, 'z-2'));
+		} @else {
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px,
+				rgba(0, 0, 0, 0.23) 0px 3px 10px;
+		}
+	} @else if $zdepth == 3 {
+		@if map-get($depth, 'z-3') {
+			box-shadow: unquote(map-get($depth, 'z-3'));
+		} @else {
+			box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px,
+				rgba(0, 0, 0, 0.23) 0px 6px 10px;
+		}
+	} @else if $zdepth == 4 {
+		@if map-get($depth, 'z-4') {
+			box-shadow: unquote(map-get($depth, 'z-4'));
+		} @else {
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px,
+				rgba(0, 0, 0, 0.22) 0px 10px 18px;
+		}
+	} @else if $zdepth == 5 {
+		@if map-get($depth, 'z-5') {
+			box-shadow: unquote(map-get($depth, 'z-5'));
+		} @else {
+			box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px,
+				rgba(0, 0, 0, 0.22) 0px 15px 20px;
+		}
+	}
+}

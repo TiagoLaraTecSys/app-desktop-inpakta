@@ -1,0 +1,19 @@
+/**
+*  Resultará em uma aparência mais fina e mais nítida de fontes. Como ambos não são padrão foi definido um mixin simples para normalizar as diferenças de sintaxe.
+ *  -moz-osx-font-smoothing: agora é suportado no Firefox estável.
+ * @mixin Antialiasing Enable
+ * @section Antialiasing
+ * @param $state Define se haverá antialising (true or false)
+ * @example
+ *   @include font-smoothing(true);
+ */
+
+@mixin antialiased($state: true) {
+	@if $state == true {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	} @else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}

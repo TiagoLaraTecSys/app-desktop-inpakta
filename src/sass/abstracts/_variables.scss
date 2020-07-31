@@ -1,0 +1,108 @@
+$root-em: 16px; // prefixo fonte base
+$em-base: 16; // prefixo fonte base
+$h-size: 26; // h1 h2 h2
+
+$qtd-col: 12;
+$grid-gutter: 1rem; //15px
+$base-gutter: ($grid-gutter / 2);
+$time-transition: 0.3s;
+$box-shadow-dark: 0 0 1rem 0.14rem rgba(0, 0, 0, 0.08);
+$box-shadow-darker: 0 0 1.5rem 0.3rem rgba(0, 0, 0, 0.08);
+$box-shadow-orders: 0 0 4px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(0,0,0,0.16);
+$ph: 30rem; //480
+$sm: 48rem; //768
+$md: 64rem; //1024
+$lg: 75rem; //1200
+$xlg: 90rem; //1440
+$md-alt: 1025px;
+
+$grid-breakpoints: (
+	xs: 0,
+	ph: $ph,
+	sm: $sm,
+	md: $md,
+	lg: $lg,
+	xl: $xlg
+) !default;
+
+$breakpoints: (
+	phone: $ph,
+	tablet: $sm,
+	desktop: $md,
+	wide: $lg,
+	fullhd: $xlg
+) !default;
+
+// Zindex
+//
+$index: (
+	z-modal: 40,
+	z-overlay: 30,
+	z-fixed: 20,
+	z-absolute: 10,
+	z-initial: 1,
+	z-auto: auto,
+	z-deep: -1
+);
+
+$z-modal: map-get($index, 'z-modal');
+$z-overlay: map-get($index, 'z-overlay');
+$z-fixed: map-get($index, 'z-fixed');
+$z-absolute: map-get($index, 'z-absolute');
+$z-initial: map-get($index, 'z-initial');
+$z-auto: map-get($index, 'z-auto');
+$z-deep: map-get($index, 'z-deep');
+
+// Duration
+//
+$duration: (
+	d-slow: 0.6s,
+	d-normal: 0.4s,
+	d-fast: 0.2s
+);
+
+$d-slow: map-get($duration, 'd-slow');
+$d-normal: map-get($duration, 'd-normal');
+$d-fast: map-get($duration, 'd-fast');
+
+// Zdepth
+//
+$depth: (
+	z-1: '0px 2px 20px 0px rgba(0, 0, 0, 0.20)',
+	z-2: '0px 2px 20px 0px rgba(0, 0, 0, 0.30)',
+	z-3: '0px 2px 20px 0px rgba(0, 0, 0, 0.40)',
+	z-4: '0px 2px 14px 0px rgba(0, 0, 0, 0.20)',
+	z-5: '0px 19px 24px 0px rgba(0, 0, 0, 0.25)'
+);
+
+$border: (
+	br-3: 0.1875rem,
+	br-4: 0.25rem,
+	br-5: 0.3125rem,
+	br-6: 0.375rem,
+	br-10: 0.625rem
+);
+
+$opacity: (
+	op-1: 0.1,
+	op-2: 0.2,
+	op-3: 0.3,
+	op-4: 0.4,
+	op-5: 0.5,
+	op-6: 0.6,
+	op-7: 0.7,
+	op-8: 0.8,
+	op-9: 0.9,
+	op-10: 1
+);
+
+$op-1: map-get($opacity, "op-1");
+$op-2: map-get($opacity, "op-2");
+$op-3: map-get($opacity, "op-3");
+$op-4: map-get($opacity, "op-4");
+$op-5: map-get($opacity, "op-5");
+$op-6: map-get($opacity, "op-6");
+$op-7: map-get($opacity, "op-7");
+$op-8: map-get($opacity, "op-8");
+$op-9: map-get($opacity, "op-9");
+$op-10: map-get($opacity, "op-10");

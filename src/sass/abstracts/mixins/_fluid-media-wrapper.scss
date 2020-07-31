@@ -1,0 +1,28 @@
+/*
+For use with fluid-media-wrapper where the child is not an embed, iframe, or object element.
+*/
+@mixin fluid-media-wrapper__media() {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/*
+A fluid media wrapper provides the ability to maintain a consistent aspect ratio for video and media content while allowing that content to scale to a maximum width in a responsive layout.
+*/
+@mixin fluid-media-wrapper($ratio: 16 9) {
+	@if length($ratio) < 2 or length($ratio) > 2 {
+		@warn '#{inspect($ratio)} must be a list with two values.';
+	}
+
+	position: relative;
+	padding-top: percentage(nth($ratio, 2) / nth($ratio, 1));
+
+	embed,
+	iframe,
+	object {
+		@include fluid-media-wrapper__media;
+	}
+}

@@ -1,0 +1,53 @@
+/**
+*  Remove estilos de bullet point de uma lista e seus filhos.
+ * @mixin Bullet Point
+ * @section Unstyled
+ * @example
+ *  @include unbulleted-list()
+ */
+@mixin unbulleted-list() {
+	list-style-type: none;
+	padding: 0;
+}
+
+/**
+*  Exibe uma âncora como texto sem formatação.
+ * @mixin Âncora como Texto
+ * @section Unstyled
+ * @example
+ *  @include unstyled-anchor()
+ */
+@mixin unstyled-anchor() {
+	color: inherit;
+	text-decoration: none;
+}
+
+/**
+*  Tira o estilo do navegador a partir de um input.
+ * @mixin Remove Estilo Input
+ * @section Unstyled
+ * @example
+ *  @include unstyled-input()
+ */
+@mixin unstyled-input() {
+	background: {
+		color: transparent;
+	}
+	border: none;
+	font: inherit;
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+
+/**
+*  Monta uma lista sem estilo.
+ * @mixin Lista sem Estilo
+ * @section Unstyled
+ * @example
+ *  @include unstyled-list()
+ */
+@mixin unstyled-list() {
+	@include unbulleted-list;
+	margin: 0;
+}
