@@ -2,7 +2,7 @@
   "name": "app-desktop-electron",
   "version": "0.1.0",
   "main": "public/electron.js",
-  
+  "homepage":"./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
