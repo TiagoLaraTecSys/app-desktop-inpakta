@@ -1,7 +1,9 @@
-header {
+.inp-header {
 	display: flex;
 	justify-content: space-between;
-	background-color: #000000;
+	background-color: $c-white;
+  border-bottom: 2px solid $c-ciano-dark;
+  padding: 16px;
 
 	h1 {
 		color: #00cca3;
@@ -26,4 +28,11 @@ header {
 			}
 		}
 	}
+
+  &__logo {
+    max-width: 160px;
+    img {
+      @include size(100%)
+    }
+  }
 }

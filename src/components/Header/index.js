@@ -1,10 +1,13 @@
 import React from 'react';
+import Logo from '../../images/inpakta.png'
 
 
 function Header() {
   return (
-		<header>
-			<h1>pega na minha bola</h1>
+		<header className="inp-header">
+      <div className="inp-header__logo">
+        <img src={Logo}></img>
+      </div>
 			<nav>
 				<ul>
 					<li>
