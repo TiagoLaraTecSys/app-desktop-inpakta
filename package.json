@@ -2,7 +2,7 @@
   "name": "app-desktop-electron",
   "version": "0.1.0",
   "main": "public/electron.js",
-  "homepage":"./",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -19,9 +19,9 @@
     "react-build": "react-scripts build",
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
-    "electron-build":"electron-builder",
-    "build":"npm run react-build $$ npm run electron-build",
-    "start":"concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-build": "electron-builder",
+    "build": "npm run react-build $$ npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
