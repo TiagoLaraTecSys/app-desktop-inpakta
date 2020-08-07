@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 function Login() {
@@ -10,7 +11,7 @@ function Login() {
         <label>Senha</label>
         <input type="password" name="password"></input>
         <button type="submit" className="inp-login__btn">Entrar</button>
-        <a href="/">ou cadastre-se</a>
+        <Link to="/cadastro">ou cadastre-se</Link>
       </form>
       </div>
   );
