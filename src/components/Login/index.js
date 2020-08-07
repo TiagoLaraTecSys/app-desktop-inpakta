@@ -4,7 +4,7 @@ import React from 'react';
 function Login() {
   return (
     <div className="inp-login">
-      <form className="inp-login__form">
+      <form onSubmit="" className="inp-login__form">
         <label>Usuário</label>
         <input type="text" name="user"></input>
         <label>Usuário</label>
