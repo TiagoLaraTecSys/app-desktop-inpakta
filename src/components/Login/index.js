@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 function submitUserLogin(){
   let url = 'https://inpaktaservice.herokuapp.com/login';
   let imprim = {email: 'laratecsys@gmail.com', senha: '1234'};
@@ -17,10 +16,6 @@ function submitUserLogin(){
   .then(json => {console.log(json)})
 }
 
-function imprimir(){
-  console.log('Testando');
-}
-
 function Login(){
   
   return (
@@ -32,6 +27,7 @@ function Login(){
         <input type="password" name="password"></input>
         <button className="inp-login__btn" onClick={submitUserLogin()}>Entrar</button>
         <Link to="/cadastro">ou cadastre-se</Link>
+        <Link to="/configMapeamento">Configuração Mapeamento</Link>
       </div>
     </div>
   );

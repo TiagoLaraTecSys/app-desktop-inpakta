@@ -11,7 +11,7 @@ function Header() {
 			<nav>
 				<ul>
 					<li>
-						<a href="/">Menu1</a>
+						<a href="/">Bundinha</a>
 					</li>
 					<li>
 						<a href="/">Menu2</a>
