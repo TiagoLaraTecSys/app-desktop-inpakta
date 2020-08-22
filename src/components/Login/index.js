@@ -1,37 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
+import {reduxForm, Field} from 'redux-form';
+import {submitUserAction} from '../../services/UserServices/UserLogin'
 
-function submitUserLogin(){
-  let url = 'https://inpaktaservice.herokuapp.com/login';
-  let imprim = {email: 'laratecsys@gmail.com', senha: '1234'};
+const UserFormFun = props =>{
 
-  fetch(url, {
-      method: "POST",
-      headers: {
-          'Content-type':'application/json'
-      },
-      body: JSON.stringify(imprim)
-  })
-  .then(response => response.json())
-  .then(json => {console.log(json)})
-}
-
-function Login(){
-  
+  const {handleSubmit} = props
+  const submit = (data, submitUserAction) => {submitUserAction(data)}
   return (
-    <div className="inp-login">
-      <div onSubmit="" className="inp-login__form">
-        <label>Usuário</label>
-        <input type="text" name="user"></input>
+    <form className="inp-login" onSubmit={handleSubmit((fields) => submit(fields, submitUserAction))}>
+        <label>Email</label>
+        <Field type="email" component="input" name="email"/>
         <label>Senha</label>
-        <input type="password" name="password"></input>
-        <button className="inp-login__btn" onClick={submitUserLogin()}>Entrar</button>
-        <Link to="/cadastro">ou cadastre-se</Link>
-        <Link to="/configMapeamento">Configuração Mapeamento</Link>
-      </div>
-    </div>
+        <Field type="password" component="input" name="senha"/>
+        <button className="inp-login__btn" type="submit">Submit</button>
+    </form>
+
   );
 }
 
+const UserForm = (reduxForm({
+  form: "formUser"
+}))(UserFormFun)
 
-export default Login;
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps, {submitUserAction})(UserForm)

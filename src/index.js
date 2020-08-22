@@ -5,6 +5,12 @@ import App from './App';
 import ComponentList from './pages/ConfigMapeamento/ComponentList'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Cadastro from './components/Cadastro'
+
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware} from 'redux'
+import rootReducer from './redux/reducers'
+import ReduxThunk from 'react-thunk'
+
 function Pagina404(){
   return(
     <div>
@@ -17,6 +23,7 @@ function Pagina404(){
 ReactDOM.render(
 
   <BrowserRouter>
+  <Provider store={createStore(rootReducer, {}, applyMiddleware(ReduxThunk))}>
     <Switch>
       <Route path="/" component={App} exact></Route>
       <Route path="/cadastro" component={Cadastro}></Route>
@@ -24,6 +31,7 @@ ReactDOM.render(
       <Route component={Pagina404}></Route>
       
     </Switch>
+    </Provider>
   </BrowserRouter>,
   document.getElementById('root')
 

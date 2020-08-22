@@ -1,6 +1,4 @@
-
-export const submitUserLogin = (data) => {
-
+export const submitUserAction = (data) => {
     let url = 'abc';
 
     fetch(url, {
@@ -12,4 +10,5 @@ export const submitUserLogin = (data) => {
     })
     .then(response => response.json())
     .then(json => {console.log(json)})
+
 }
