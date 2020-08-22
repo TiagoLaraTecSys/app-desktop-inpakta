@@ -2,19 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Login() {
+function imprimir(){
+  console.log('Testando');
+}
+
+function Login(){
+  
   return (
     <div className="inp-login">
-      <form className="inp-login__form">
+      <form onSubmit="" className="inp-login__form">
         <label>Usuário</label>
         <input type="text" name="user"></input>
         <label>Senha</label>
         <input type="password" name="password"></input>
-        <button type="submit" className="inp-login__btn">Entrar</button>
+        <button className="inp-login__btn" onClick={imprimir()}>Entrar</button>
         <Link to="/cadastro">ou cadastre-se</Link>
       </form>
-      </div>
+    </div>
   );
 }
+
 
 export default Login;
