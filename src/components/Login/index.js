@@ -1,57 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
+import {reduxForm, Field} from 'redux-form';
+import {submitUserAction} from '../../services/UserServices/UserLogin'
 
+const UserFormFun = props =>{
 
+  const {handleSubmit} = props
+  const submit = (data, submitUserAction) => {submitUserAction(data)}
+  return (
+    <form className="inp-login" onSubmit={handleSubmit((fields) => submit(fields, submitUserAction))}>
+        <label>Email</label>
+        <Field type="email" component="input" name="email"/>
+        <label>Senha</label>
+        <Field type="password" component="input" name="senha"/>
+        <button className="inp-login__btn" type="submit">Submit</button>
+    </form>
 
-export default class Login extends Component {
-  constructor( props ){
-		super( props )
-		this.state = {
-      email: "",
-      senha:"",
-    }
-    this.submitUserLogin = this.submitUserLogin.bind(this),
-    this.handleChangeEmail = this.handleChangeEmail.bind(this),
-    this.handleChangeSenha = this.handleChangeSenha.bind(this)
-  }
-  
-  submitUserLogin() {
-    let email = this.state.email;
-    let senha = this.state.senha;
-    let url = 'https://inpaktaservice.herokuapp.com/login';
-    let imprim = {email, senha};
-
-  fetch(url, {
-      method: "POST",
-      headers: {
-          'Content-type':'application/json'
-      },
-      body: JSON.stringify(imprim)
-  })
-  .then(response => response.json())
-  .then(json => {console.log(json)})
-}
-handleChangeEmail(e){
-  this.setState({ email: e.target.value })
+  );
 }
 
-handleChangeSenha(e) {
-  this.setState({ email: e.target.value })
-  }
-  
-  
-  render() {
-    return (
-      <div className="inp-login">
-        <div onSubmit="" className="inp-login__form">
-          <label>Usuário</label>
-          <input type="text" name="user" onChange={(e) => handleChangeEmail(e)}></input>
-          <label>Senha</label>
-          <input type="password" name="password" onChange={(e) => handleChangeSenha(e)}></input>
-          <button className="inp-login__btn" onClick={submitUserLogin()}>Entrar</button>
-          <Link to="/cadastro">ou cadastre-se</Link>
-        </div>
-      </div>
-    );
-  }
-}
+const UserForm = (reduxForm({
+  form: "formUser"
+}))(UserFormFun)
+
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps, {submitUserAction})(UserForm)
