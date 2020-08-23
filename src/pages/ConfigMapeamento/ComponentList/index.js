@@ -14,9 +14,7 @@ return(
             <span>URL Conexão</span>
         </div>
         <div>
-            <FiChevronDown/>
-            <FiChevronUp/>
-            <BsToggleOff/>
+
         </div>
     </div>
 );
