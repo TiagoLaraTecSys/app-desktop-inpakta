@@ -1,5 +1,6 @@
 import LoginPage from './components/Login'
 import CadastroPage from './components/Cadastro'
+import ComponentList from './pages/ConfigMapeamento/ComponentList';
 
 function page404(){
     return(
@@ -18,6 +19,11 @@ const routesConfig = [
     {
         path: "/cadastro",
         component: CadastroPage,
+        exact: true
+    },
+    {
+        path: "/componentList",
+        component: ComponentList,
         exact: true
     },
     {

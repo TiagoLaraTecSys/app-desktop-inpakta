@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
+import Cadastro from './components/Cadastro'
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -21,7 +22,7 @@ ReactDOM.render(
 
   <Provider store={createStore(rootReducer, {}, applyMiddleware(ReduxThunk))}>
     <Router>
-      <App/>      
+      <App/>,    
     </Router>
     </Provider>,
   document.getElementById('root')
