@@ -7,18 +7,20 @@ import { listAllDbProperties } from '../../services/UserServices/ListAllDbProper
 
 const UserFormFun = props =>{
 
-  const {handleSubmit} = props
+  const { handleSubmit } = props
+  
   const submit = (data, submitUserAction) => {submitUserAction(data)}
   return (
-    <form action="/componentList" className="inp-login" onSubmit={handleSubmit((fields) => submit(fields, submitUserAction))}>
-        <label>Email</label>
-        <Field type="text" component="input" name="email"/>
-        <label>Senha</label>
-        <Field type="password" component="input" name="senha"/>
-        <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
-        <Link to="/cadastro" onClick={console.log('olá')}>ou se cadastre</Link>
-    </form>
-
+    <div className="inp-login">
+      <form action="/componentList" className="inp-login__form" onSubmit={handleSubmit((fields) => submit(fields, submitUserAction))}>
+          <label>Email</label>
+          <Field type="text" component="input" name="email"/>
+          <label>Senha</label>
+          <Field type="password" component="input" name="senha"/>
+          <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
+          <Link to="/cadastro" onClick={console.log('olá')}>ou se cadastre</Link>
+      </form>
+    </div>
   );
 }
 
