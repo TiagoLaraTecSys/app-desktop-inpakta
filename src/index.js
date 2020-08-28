@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import Cadastro from './components/Cadastro'
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './redux/reducers'
@@ -20,11 +20,12 @@ function Pagina404(){
 
 ReactDOM.render(
 
-  <Provider store={createStore(rootReducer, {}, applyMiddleware(ReduxThunk))}>
-    <Router>
-      <App/>,    
-    </Router>
-    </Provider>,
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={App} exact></Route>
+      <Route path="/cadastro" component={Cadastro}></Route>
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 
 );

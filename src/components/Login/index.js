@@ -75,7 +75,7 @@ class Login extends Component {
             />
           </label>
            <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
-           <Link to="/cadastro" onClick={console.log('olá')}>ou se cadastre</Link>
+           <Link to="/cadastro">ou se cadastre :*</Link>
       </form>
      </div>
     )
