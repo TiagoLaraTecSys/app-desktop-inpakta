@@ -53,6 +53,7 @@ class Login extends Component {
        <form action="/componentList" className="inp-login__form" onSubmit={this.handleSubmit}>
           <label>
             Email
+          </label>
           <input
             type='email'
             name='email'
@@ -62,9 +63,10 @@ class Login extends Component {
             value={email}
             required
           />
-          </label>
+          
           <label >
             Senha
+          </label>
             <input
               type='password'
               name='senha'
@@ -73,7 +75,7 @@ class Login extends Component {
               value={senha}
               required
             />
-          </label>
+          
            <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
            <Link to="/cadastro">ou se cadastre :*</Link>
       </form>
