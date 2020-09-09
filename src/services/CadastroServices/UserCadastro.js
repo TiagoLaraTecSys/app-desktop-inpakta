@@ -13,6 +13,7 @@ export const submitUserAction = (data) => {
     })
     .then(response => response.json())
     .then(json => {console.log(json)
-        
+
     })
+    .catch(reason => {console.log(reason + ' Ueee ')})
 }
