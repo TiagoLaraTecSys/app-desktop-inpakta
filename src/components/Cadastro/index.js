@@ -3,7 +3,7 @@ import {submitUserAction} from '../../services/UserServices/UserCadastro'
 
 class Cadastro extends Component {
   constructor() {
-    //super();
+    super();
     this.state = {
       data: this.defaultData,
     }

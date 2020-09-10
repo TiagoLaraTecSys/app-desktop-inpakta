@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './redux/reducers'
 import ReduxThunk from 'redux-thunk'
+import CadastroDbProperties from './components/DbProperties';
 
 function Pagina404(){
   return(
@@ -24,6 +25,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" component={App} exact></Route>
       <Route path="/cadastro" component={Cadastro}></Route>
+      <Route path="/dbproperties" component={CadastroDbProperties}></Route>
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
