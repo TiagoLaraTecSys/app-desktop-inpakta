@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import {submitUserAction} from '../../services/UserServices/UserCadastro'
+import React, { Component } from 'react'
 
-class Cadastro extends Component {
+
+class CadastroInfos extends Component {
   constructor() {
     super();
     this.state = {
@@ -11,10 +11,12 @@ class Cadastro extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   defaultData = {
-    nome: '',
-    sobNome: '',
-    senha: '',
-		email: '',
+    repository: '',
+    vendor: '',
+    driver: '',
+    username: '',
+    password: '',
+    dbschema:'',
   };
 
   handleChange(e) {
@@ -105,4 +107,4 @@ class Cadastro extends Component {
     )
   }
 }
-export default Cadastro
+export default CadastroInfos
