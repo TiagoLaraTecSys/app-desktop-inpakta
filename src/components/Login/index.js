@@ -80,6 +80,7 @@ class Login extends Component {
           
            <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
            <Link to="/cadastro">ou se cadastre :*</Link>
+           <Link to="/dbproperties">CADASTRAR UM BANCO DE DADOS</Link>
       </form>
      </div>
     )
