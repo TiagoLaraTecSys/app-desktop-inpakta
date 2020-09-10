@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {submitUserAction} from '../../services/CadastroServices/UserCadastro'
+import {submitUserAction} from '../../services/UserServices/UserCadastro'
 
 class Cadastro extends Component {
   constructor() {
-    super();
+    //super();
     this.state = {
       data: this.defaultData,
     }

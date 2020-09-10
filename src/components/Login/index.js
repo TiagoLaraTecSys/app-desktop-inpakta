@@ -3,14 +3,16 @@ import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import {reduxForm, Field} from 'redux-form';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
-
+import {listAllDbProperties} from '../../services/CadastroServices/ListAllDbProperties'
 
 class Login extends Component {
   constructor() {
     super();
+    listAllDbProperties();
     this.state = {
       data: this.defaultData,
     }
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
