@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import {reduxForm, Field} from 'redux-form';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
-import {listAllDbProperties} from '../../services/CadastroServices/ListAllDbProperties'
+import {listAllDbProperties} from '../../services/UserServices/DBServices/ListAllDbProperties'
 
 class Login extends Component {
   constructor() {
