@@ -20,7 +20,7 @@ class DbProperties extends Component {
     dbschema: '',
     url: '',
     isActive:'',
-    dataDiscoveryProperties_id:''
+    dataDiscoveryProperties_id:'75'
   };
 
   handleChange(e) {
