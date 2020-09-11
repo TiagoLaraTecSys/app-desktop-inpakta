@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 100%;
   background-image: url('../../images/marca-dagua.png');
-  background-size: 80%;
+  background-size: 100%;
   background-position-x: 280px;
   background-position-y: 50%;
   background-repeat: no-repeat;
@@ -15,11 +15,16 @@
     flex-direction: column;
     padding: 30px;
 
+   
     label {
       color: $c-black;
       display: block;
+
+      .check {
+        max-width: rem(20);
+      }
     }
-    input {
+    input[type=text] {
       min-width: 272px;
       font: {
         size: 14px;
