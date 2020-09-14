@@ -82,6 +82,7 @@ class Login extends Component {
            <Link to="/cadastro">ou se cadastre :*</Link>
            <Link to="/dbproperties">CADASTRAR UM BANCO DE DADOS</Link>
            <Link to="/lista">Lista de banco de dados</Link>
+           <Link to="/telainicial">Tela Inicial Pós Login</Link>
       </form>
      </div>
     )

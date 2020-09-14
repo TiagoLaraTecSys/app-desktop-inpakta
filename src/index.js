@@ -10,6 +10,7 @@ import rootReducer from './redux/reducers'
 import ReduxThunk from 'redux-thunk'
 import CadastroDbProperties from './components/DbProperties';
 import ComponentList from './pages/ConfigMapeamento/ComponentList';
+import TelaInicial from './pages/ConfigMapeamento';
 
 function Pagina404(){
   return(
@@ -28,6 +29,7 @@ ReactDOM.render(
       <Route path="/cadastro" component={Cadastro}></Route>
       <Route path="/dbproperties" component={CadastroDbProperties}></Route>
       <Route path="/lista" component={ComponentList}></Route>
+      <Route path="/telainicial" component={TelaInicial}></Route>
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
