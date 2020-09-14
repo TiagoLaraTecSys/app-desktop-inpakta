@@ -7,8 +7,8 @@ img{
 
 .divPrincipal{
     position: relative;
-    border-color: darkgray;
-    border-width: thick;
+    border-radius: 5px;
+    border: 1px solid honeydew;
     display: flex;
     width: 100%;
     height: 100px;
