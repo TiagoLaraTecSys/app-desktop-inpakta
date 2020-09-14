@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { FiChevronDown, FiChevronUp, BsToggleOff, BsToggleOn } from 'react-icons'
 import './style.css'
 
 
-function ComponentList(){
+class ComponentList extends Component{
 
-return(
-    <div> 
+render(){
+
+    return(
+        <div> 
         <img src="https://cdn.worldvectorlogo.com/logos/mysql.svg"></img>
         <div className="divSecondary">
             <span>Usuário</span>
@@ -17,8 +19,9 @@ return(
 
         </div>
     </div>
-);
+    );
 
+}
 }
 
 export default ComponentList;
