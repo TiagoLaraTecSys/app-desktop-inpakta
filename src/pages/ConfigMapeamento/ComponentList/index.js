@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BsToggleOff, BsFillCaretRightFill} from 'react-icons/bs'
 import './style.css'
+import Header from '../../../components/Header'
 
 
 
@@ -9,8 +10,10 @@ class ComponentList extends Component{
 
 render(){
 
-    return(
-        <li className="divPrincipal"> 
+  return (
+     
+    <li className="divPrincipal"> 
+       <Header />
             <img src="https://cdn.worldvectorlogo.com/logos/mysql.svg"></img>
         <div className="divSecundaria">
             <span>Usuário: root</span>

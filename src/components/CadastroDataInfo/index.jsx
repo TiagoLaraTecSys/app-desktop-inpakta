@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { insertDbProperties } from '../../services/UserServices/DBServices/InsertDbProperties'
 
 
 class CadastroInfos extends Component {
@@ -33,7 +34,7 @@ class CadastroInfos extends Component {
 
     if (data !== '') {
       
-      submitUserAction(data)
+      insertDbProperties(data)
         
     } else {
       alert("deu erraddo fdp")

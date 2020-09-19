@@ -11,7 +11,9 @@ export const submitUserAction = (data) => {
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
+      .then(response => response.json(
+      
+    ))
     .then(json => {console.log(json)
         
         return(<Link to="/cadastro"></Link>);

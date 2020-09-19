@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import Header from '../Header'
 
 class CadastroDbProperties extends Component {
     constructor(){
@@ -8,7 +9,8 @@ class CadastroDbProperties extends Component {
     render(){
 
         return(
-            <div>
+          <div>
+            <Header />
                 <h1>Hello Word é o caraio Fião</h1>
             </div>
         )

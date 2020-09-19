@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import {reduxForm, Field} from 'redux-form';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
 import {listAllDbProperties} from '../../services/UserServices/DBServices/ListAllDbProperties'
 
 class Login extends Component {
   constructor() {
     super();
-    listAllDbProperties();
+    //listAllDbProperties();
     this.state = {
       data: this.defaultData,
     }
