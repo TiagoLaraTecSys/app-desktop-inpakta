@@ -7,8 +7,10 @@ class MainPage extends Component {
   render() {
     return (
       <div className="main-page container">
-        <Header/>
-        <DbList />
+        <Header />
+        <div className="main-page__wrapper">
+          <DbList />
+        </div>
       </div>
     )
 

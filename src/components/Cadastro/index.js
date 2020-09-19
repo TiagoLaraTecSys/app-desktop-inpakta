@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { submitUserAction } from '../../services/UserServices/UserCadastro'
+import { listAllDbProperties } from '../../services/UserServices/DBServices/ListAllDbProperties'
 import { Link } from 'react-router-dom';
 
 class Cadastro extends Component {
   constructor() {
     super();
+    listAllDbProperties();
     this.state = {
       data: this.defaultData,
     }

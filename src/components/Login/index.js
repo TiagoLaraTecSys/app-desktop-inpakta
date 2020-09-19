@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
-import { listAllDbProperties } from '../../services/UserServices/DBServices/ListAllDbProperties'
+
 
 
 class Login extends Component {
   constructor() {
     super();
-    listAllDbProperties();
     this.state = {
+      redirect: '',
       data: this.defaultData,
     }
 
@@ -33,13 +33,18 @@ class Login extends Component {
     } = this.state;
 
     if (data !== '') {
+
+      let authToken = submitUserAction(data);
       
-      submitUserAction(data)
-        
+      if (authToken !== '') {
+        this.setState({redirect: "/cadastro"})
+      }
     } else {
       alert("deu erraddo fdp")
     }
+    
   }
+
   
   render() {
     const {
@@ -49,6 +54,9 @@ class Login extends Component {
       },
     } = this.state;
 
+    if (this.state.redirect !== '') {
+      return (<Redirect to={this.state.redirect}/>)
+    }
     return (
       <div className="inp-login container">
        <form action="/main" className="inp-login__form" onSubmit={this.handleSubmit}>
@@ -78,7 +86,8 @@ class Login extends Component {
             />
           
            <button to="/main" className="inp-login__btn" type="submit">Submit</button>
-           <Link to="/cadastro">ou se cadastre :*</Link>
+          <Link to="/cadastro">ou se cadastre :*</Link>
+          
       </form>
      </div>
     )
