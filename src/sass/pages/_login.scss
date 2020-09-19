@@ -1,14 +1,5 @@
 .inp-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-image: url('../../images/marca-dagua.png');
-  background-size: 80%;
-  background-position-x: 280px;
-  background-position-y: 50%;
-  background-repeat: no-repeat;
-  margin-top: 80px;
+    background-color: $c-ciano;
   
   &__form {
     display: flex;

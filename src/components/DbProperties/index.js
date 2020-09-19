@@ -58,7 +58,7 @@ class DbProperties extends Component {
     } = this.state;
 
     return (
-      <div className="cadastro">
+      <div className="cadastro container">
         <Header ></Header>
         <form action="/componentList" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>

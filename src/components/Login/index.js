@@ -7,7 +7,7 @@ import Header from '../Header'
 class Login extends Component {
   constructor() {
     super();
-    //listAllDbProperties();
+    listAllDbProperties();
     this.state = {
       data: this.defaultData,
     }
@@ -50,7 +50,7 @@ class Login extends Component {
     } = this.state;
 
     return (
-      <div className="inp-login">
+      <div className="inp-login container">
        <Header/> 
        <form action="/componentList" className="inp-login__form" onSubmit={this.handleSubmit}>
           <label>
