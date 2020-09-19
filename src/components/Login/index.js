@@ -52,7 +52,7 @@ class Login extends Component {
     return (
       <div className="inp-login container">
        <Header/> 
-       <form action="/componentList" className="inp-login__form" onSubmit={this.handleSubmit}>
+       <form action="/main" className="inp-login__form" onSubmit={this.handleSubmit}>
           <label>
             Email
           </label>
@@ -78,7 +78,7 @@ class Login extends Component {
               required
             />
           
-           <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
+           <button to="/main" className="inp-login__btn" type="submit">Submit</button>
            <Link to="/cadastro">ou se cadastre :*</Link>
            <Link to="/dbproperties">CADASTRAR UM BANCO DE DADOS</Link>
            <Link to="/lista">Lista de banco de dados</Link>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BsToggleOff, BsFillCaretRightFill} from 'react-icons/bs'
 import './style.css'
-import Header from '../../../components/Header'
+import Header from '../Header'
 
 
 

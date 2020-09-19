@@ -60,7 +60,7 @@ class DbProperties extends Component {
     return (
       <div className="cadastro container">
         <Header ></Header>
-        <form action="/componentList" className="cadastro__form" onSubmit={this.handleSubmit}>
+        <form action="/main" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>
             Gerenciador
           </label>
@@ -145,7 +145,7 @@ class DbProperties extends Component {
             Ativado
           </label>
           
-           <button to="/componentList" className="cadastro__btn" type="submit">Submit</button>
+           <button to="/main" className="cadastro__btn" type="submit">Submit</button>
          
       </form>
      </div>

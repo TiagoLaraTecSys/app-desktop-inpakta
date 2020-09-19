@@ -20,7 +20,7 @@ function Header() {
 						<Link to="/cadastrodb">CADASTRAR UM BANCO DE DADOS</Link>
 					</li>
 					<li>
-						<Link to="/lista">Lista de banco de dados</Link>
+						<Link to="/main">Lista de banco de dados</Link>
           </li>
           	<li>
 					  <Link to="/telainicial">Tela Inicial Pós Login</Link>

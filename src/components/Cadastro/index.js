@@ -52,7 +52,7 @@ class Cadastro extends Component {
     return (
       <div className="cadastro container">
         <Header />
-        <form action="/componentList" className="cadastro__form" onSubmit={this.handleSubmit}>
+        <form action="/main" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>
             Nome
           </label>
@@ -100,7 +100,7 @@ class Cadastro extends Component {
               required
             />
           
-           <button to="/componentList" className="cadastro__btn" type="submit">Submit</button>
+           <button to="/main" className="cadastro__btn" type="submit">Submit</button>
          
       </form>
      </div>
