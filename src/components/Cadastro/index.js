@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { submitUserAction } from '../../services/UserServices/UserCadastro'
-import Header from '../Header'
+import { Link } from 'react-router-dom';
 
 class Cadastro extends Component {
   constructor() {
@@ -51,7 +51,6 @@ class Cadastro extends Component {
 
     return (
       <div className="cadastro container">
-        <Header />
         <form action="/main" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>
             Nome
@@ -100,7 +99,8 @@ class Cadastro extends Component {
               required
             />
           
-           <button to="/main" className="cadastro__btn" type="submit">Submit</button>
+          <button to="/main" className="cadastro__btn" type="submit">Submit</button>
+          <Link  to="/login">Lista de banco de dados </Link>
          
       </form>
      </div>

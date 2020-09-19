@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
 import { listAllDbProperties } from '../../services/UserServices/DBServices/ListAllDbProperties'
-import Header from '../Header'
+
 
 class Login extends Component {
   constructor() {
@@ -51,7 +51,6 @@ class Login extends Component {
 
     return (
       <div className="inp-login container">
-       <Header/> 
        <form action="/main" className="inp-login__form" onSubmit={this.handleSubmit}>
           <label>
             Email
@@ -80,9 +79,6 @@ class Login extends Component {
           
            <button to="/main" className="inp-login__btn" type="submit">Submit</button>
            <Link to="/cadastro">ou se cadastre :*</Link>
-           <Link to="/dbproperties">CADASTRAR UM BANCO DE DADOS</Link>
-           <Link to="/lista">Lista de banco de dados</Link>
-           <Link to="/telainicial">Tela Inicial Pós Login</Link>
       </form>
      </div>
     )

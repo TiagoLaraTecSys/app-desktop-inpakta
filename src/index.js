@@ -2,14 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
-import Cadastro from './components/Cadastro'
+import Cadastro from './pages/SignUpPage'
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './redux/reducers'
-import ReduxThunk from 'redux-thunk'
-import Login from './components/Login'
-import DbProperties from './components/DbProperties';
+import Login from './pages/LoginPage'
+import DbProperties from './pages/SignDataInfoPage';
 import MainPage from './pages/MainPage';
 
 function Pagina404(){

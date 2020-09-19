@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import DbList from '../../components/DbList'
+import DbProperties from '../../components/DbProperties'
 import Header from '../../components/Header'
 
-class MainPage extends Component { 
+class CadDbProperties extends Component { 
 
   render() {
     return (
       <div className="main-page container">
         <Header/>
-        <DbList />
+        <DbProperties />
       </div>
     )
 
   }
 }
 
-export default MainPage
+export default CadDbProperties

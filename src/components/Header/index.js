@@ -22,9 +22,6 @@ function Header() {
 					<li>
 						<Link to="/main">Lista de banco de dados</Link>
           </li>
-          	<li>
-					  <Link to="/telainicial">Tela Inicial Pós Login</Link>
-					</li>
 				</ul>
 			</nav>
 		</header>

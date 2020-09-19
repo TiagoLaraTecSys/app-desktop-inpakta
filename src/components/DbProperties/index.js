@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Header from '../Header'
 import {insertDbProperties} from '../../services/UserServices/DBServices/InsertDbProperties'
 
 
@@ -59,7 +58,7 @@ class DbProperties extends Component {
 
     return (
       <div className="cadastro container">
-        <Header ></Header>
+
         <form action="/main" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>
             Gerenciador
