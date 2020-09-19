@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './redux/reducers'
 import ReduxThunk from 'redux-thunk'
+import Login from './components/Login'
 import DbProperties from './components/DbProperties';
 import ComponentList from './pages/ConfigMapeamento/ComponentList';
 import TelaInicial from './pages/ConfigMapeamento';
@@ -26,6 +27,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" component={App} exact></Route>
+      <Route path="/login" component={Login} exact></Route>
       <Route path="/cadastro" component={Cadastro}></Route>
       <Route path="/cadastrodb" component={DbProperties}></Route>
       <Route path="/lista" component={ComponentList}></Route>

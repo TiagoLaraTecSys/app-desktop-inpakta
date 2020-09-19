@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
+import { insertDbProperties } from '../../services/UserServices/DBServices/InsertDbProperties'
 import Header from '../Header'
-import {insertDbProperties} from '../../services/UserServices/DBServices/InsertDbProperties'
 
-
-class DbProperties extends Component {
+class CadastroInfos extends Component {
   constructor() {
     super();
     this.state = {
@@ -18,10 +17,7 @@ class DbProperties extends Component {
     driver: '',
     username: '',
     password: '',
-    dbschema: '',
-    url: '',
-    isActive:'',
-    dataDiscoveryProperties_id:'75'
+    dbschema:'',
   };
 
   handleChange(e) {
@@ -48,102 +44,63 @@ class DbProperties extends Component {
   render() {
     const {
       data: {
-        vendor,
-        driver,
-        password,
-        username,
-        dbschema,
-        url
+        nome,
+        sobNome,
+        senha,
+        email
       },
     } = this.state;
 
     return (
       <div className="cadastro">
-        <Header ></Header>
+        <Header />
         <form action="/componentList" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>
-            Gerenciador
-          </label>
-          <select
-            type='text'
-            name='vendor'
-            onChange={this.handleChange}
-            className='cadastro__form--input'
-            value={vendor}
-            required
-          >
-            <option>Selecione</option>
-            <option>MySql</option>
-            <option>Oracle</option>
-          </select>
-          <label>
-            Driver
+            Nome
           </label>
           <input
             type='text'
-            name='driver'
+            name='nome'
             onChange={this.handleChange}
             className='cadastro__form--input'
-            value={driver}
+            value={nome}
             required
           />
           <label>
-            Usuário
+            Sobrenome
           </label>
           <input
             type='text'
-            name='username'
+            name='sobNome'
+            onChange={this.handleChange}
+            className='cadastro__form--input'
+            value={sobNome}
+            required
+          />
+          <label>
+            Email
+          </label>
+          <input
+            type='email'
+            name='email'
+            placeholder="E-mail*"
             onChange={this.handleChange}
             className='bf-input__general'
-            value={username}
+            value={email}
             required
           />
           
           <label >
             Senha
           </label>
-          <input
-            type='text'
-            name='password'
-            onChange={this.handleChange}
-            className='bf-input__general'
-            value={password}
-            required
-          />
-          <label >
-            Data base
-          </label>
-          <input
-            type='text'
-            name='dbschema'
-            onChange={this.handleChange}
-            className='bf-input__general'
-            value={dbschema}
-            required
-          />
-
-          <label >
-            Url
-          </label>
-          <input
-            type='text'
-            name='url'
-            onChange={this.handleChange}
-            className='bf-input__general'
-            value={url}
-            required
-          />
-
-          <label >
             <input
-              type="checkbox"
-              name='isActive'
-              className="check"
-              value="1"
+              type='password'
+              name='senha'
               onChange={this.handleChange}
+              className='bf-input__general'
+              value={senha}
+              required
             />
-            Ativado
-          </label>
           
            <button to="/componentList" className="cadastro__btn" type="submit">Submit</button>
          
@@ -152,4 +109,4 @@ class DbProperties extends Component {
     )
   }
 }
-export default DbProperties
+export default CadastroInfos

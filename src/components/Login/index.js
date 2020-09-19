@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
-import {listAllDbProperties} from '../../services/UserServices/DBServices/ListAllDbProperties'
+import { listAllDbProperties } from '../../services/UserServices/DBServices/ListAllDbProperties'
+import Header from '../Header'
 
 class Login extends Component {
   constructor() {
@@ -50,6 +51,7 @@ class Login extends Component {
 
     return (
       <div className="inp-login">
+       <Header/> 
        <form action="/componentList" className="inp-login__form" onSubmit={this.handleSubmit}>
           <label>
             Email
