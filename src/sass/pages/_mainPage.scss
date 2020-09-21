@@ -1,0 +1,40 @@
+.main-page {
+  background-color: #2BC6FC;
+
+  &__wrapper {
+    background-color: $c-white;
+    @include size(80%);
+    border-radius:20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  .db-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    padding: 20px;
+    &__item {
+      display: flex;
+      border: 1px solid $c-gray01;
+      border-radius: 4px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      .logo-db {
+        @include size(100px);
+        display: flex;
+        align-items: center;
+        img {
+           width: 100%; 
+        }
+      }
+      &--infos {
+        display: flex;
+        flex-direction: column;
+      }
+      &--buttons {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
