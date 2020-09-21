@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <div className="container">
-      <Header />
       <Login />
     </div>
   );

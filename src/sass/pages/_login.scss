@@ -1,11 +1,11 @@
 .inp-login {
-    background-color: $c-ciano;
+    background-color: $c-brand-blue-secondary;
     display: flex;
     flex-direction: column;
 
   h1 {
     margin-top: 100px;
-  }  
+  } 
   
   &__form {
     display: flex;
@@ -39,7 +39,7 @@
   }
 
   &__btn {
-    background-color:$c-ciano-dark ;
+    background-color:$c-brand-blue-primary ;
     padding: 15px;
     border-radius: 4px;
     margin-top: 10px;

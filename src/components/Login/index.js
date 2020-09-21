@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
 import { listAllDbProperties } from '../../services/UserServices/DBServices/ListAllDbProperties'
+import Logo from '../../images/brand_light.png'
 
 
 class Login extends Component {
   constructor() {
     super();
-    listAllDbProperties();
+    // listAllDbProperties();
     this.state = {
       data: this.defaultData,
     }
@@ -51,6 +52,11 @@ class Login extends Component {
 
     return (
       <div className="inp-login container">
+
+        <div className="inp-login__logo">
+          <img src={Logo}></img>
+        </div>
+
        <form action="/main" className="inp-login__form" onSubmit={this.handleSubmit}>
           <label>
             Email

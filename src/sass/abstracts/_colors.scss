@@ -1,11 +1,17 @@
 $color: (
+  c-brand-blue-primary: #2F81F8,
+  c-brand-blue-secondary: #2BC6FC,
+  c-brand-blue-tertiary: #0FB3CE,
+  c-brand-green-primary: #12DD7C,
+  c-brand-green-secondary: #2FF895,
+  c-brand-green-tertiary: #20EDD9,
 	c-white: #ffffff,
 	c-black: #000000,
-	c-black02: #242424,
+  c-black02: #242424,
 	c-blue: #286478,
 	c-blue02: #97C8D6,
 	c-blue03: #97C8D6,
-	c-ciano: #01ffb7,
+	c-ciano: #20EDD9,
 	c-ciano-dark: #0ab6b9,
 	c-dourado:#A57D50,
 	c-pink: #E7478F,
@@ -45,6 +51,13 @@ $color: (
   c-orange: #EB6223,
   c-orange02: #DC5A28
 ) !default;
+
+$c-brand-blue-primary: map-get($color, 'c-brand-blue-primary' );
+$c-brand-blue-secondary: map-get($color, 'c-brand-blue-secondary' );
+$c-brand-blue-tertiary: map-get($color, 'c-brand-blue-tertiary' );
+$c-brand-green-primary: map-get($color, 'c-brand-green-primary' );
+$c-brand-green-secondary: map-get($color, 'c-brand-green-secondary' );
+$c-brand-green-tertiary: map-get($color, 'c-brand-green-tertiary' );
 
 $c-white: map-get($color, 'c-white');
 $c-black: map-get($color, 'c-black');
