@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../images/inpakta.png'
+import Logo from '../../assets/icones/1x/Prancheta 1mdpi.png'
 
 
 function Header() {

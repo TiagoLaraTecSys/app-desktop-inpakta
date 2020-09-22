@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 export const submitUserAction = (data) => {
     let url = 'https://inpaktaservice.herokuapp.com/cliente';

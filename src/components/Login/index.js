@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { connect } from "react-redux";
+import React, { Component, useContext} from 'react';
 import { Link } from 'react-router-dom';
-import {reduxForm, Field} from 'redux-form';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
 import {listAllDbProperties} from '../../services/UserServices/DBServices/ListAllDbProperties'
+import StoreContext from '../Store/Context'
+import { useHistory } from 'react-router-dom'
 
 class Login extends Component {
+
   constructor() {
     super();
-    listAllDbProperties();
+    //listAllDbProperties();
     this.state = {
       data: this.defaultData,
     }
@@ -27,17 +28,21 @@ class Login extends Component {
     this.setState({data: {...data, [name]: value} });
   }
 
-  handleSubmit(e) {
+  
+ handleSubmit(e) {
     e.preventDefault();
     const {
       data,
     } = this.state;
-
+    //const { setToken } = useContext(StoreContext);
+    
     if (data !== '') {
+      const token = submitUserAction(data)
+      //setToken(token);
+      console.log('Amém glória Deus ' + token)
       
-      submitUserAction(data)
-        
     } else {
+
       alert("deu erraddo fdp")
     }
   }
@@ -89,33 +94,3 @@ class Login extends Component {
   }
 }
 export default Login
-
-// const UserFormFun = props =>{
-
-//   const { handleSubmit } = props
-  
-//   const submit = (data, submitUserAction) => {submitUserAction(data)}
-//   return (
-//     <div className="inp-login">
-//       <form action="/componentList" className="inp-login__form" onSubmit={handleSubmit((fields) => submit(fields, submitUserAction))}>
-//           <label>Email</label>
-//           <Field type="text" component="input" name="email"/>
-//           <label>Senha</label>
-//           <Field type="password" component="input" name="senha"/>
-//           <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
-//           <Link to="/cadastro" onClick={console.log('olá')}>ou se cadastre</Link>
-//       </form>
-//     </div>
-//   );
-// }
-
-// const UserForm = (reduxForm({
-//   form: "formUser"
-// }))(UserFormFun)
-
-// const mapStateToProps = state => ({
-
-
-// })
-
-// export default connect(mapStateToProps, {submitUserAction})(UserForm)

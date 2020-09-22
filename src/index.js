@@ -3,14 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import Cadastro from './components/Cadastro'
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './redux/reducers'
-import ReduxThunk from 'redux-thunk'
+import { Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import CadastroDbProperties from './components/DbProperties';
 import ComponentList from './pages/ConfigMapeamento/ComponentList';
 import TelaInicial from './pages/ConfigMapeamento';
+import StoreProvider from './components/Store/Provider'
 
 function Pagina404(){
   return(
@@ -23,7 +20,8 @@ function Pagina404(){
 
 ReactDOM.render(
 
-  <BrowserRouter>
+  <Router>
+   
     <Switch>
       <Route path="/" component={App} exact></Route>
       <Route path="/cadastro" component={Cadastro}></Route>
@@ -31,7 +29,8 @@ ReactDOM.render(
       <Route path="/lista" component={ComponentList}></Route>
       <Route path="/telainicial" component={TelaInicial}></Route>
     </Switch>
-  </BrowserRouter>,
+    
+  </Router>,
   document.getElementById('root')
 
 );

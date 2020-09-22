@@ -1,7 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-export const submitUserAction = (data) => {
+export const submitUserAction =  (data) => {
     let url = 'https://inpaktaservice.herokuapp.com/login';
 
     fetch(url, {
@@ -14,6 +12,6 @@ export const submitUserAction = (data) => {
     .then(response => response.json())
     .then(json => {console.log(json)
         
-        return(<Link to="/cadastro"></Link>);
+        return {token: json}
     })
 }
