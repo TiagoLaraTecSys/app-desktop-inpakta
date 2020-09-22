@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
 import { listAllDbProperties } from '../../services/UserServices/DBServices/ListAllDbProperties'
-import Logo from '../../images/brand_light.png'
 
 
 class Login extends Component {
@@ -60,42 +59,39 @@ class Login extends Component {
       return (<Redirect to={this.state.redirect}/>)
     }
     return (
-      <div className="inp-login container">
-
-        <div className="inp-login__logo">
-          <img src={Logo}></img>
-        </div>
+      <div className="inp-login">
 
        <form action="/main" className="inp-login__form" onSubmit={this.handleSubmit}>
-          <label>
-            Email
-          </label>
+ 
           <input
             type='email'
             name='email'
-            placeholder="E-mail*"
+            placeholder="E-mail"
             onChange={this.handleChange}
             className='bf-input__general'
             value={email}
             required
           />
           
-          <label >
-            Senha
-          </label>
             <input
               type='password'
               name='senha'
+              placeholder="Senha"
               onChange={this.handleChange}
               className='bf-input__general'
               value={senha}
               required
-            />
-          
-           <button to="/main" className="inp-login__btn" type="submit">Submit</button>
-          <Link to="/cadastro">ou se cadastre :*</Link>
-          
+            />          
+
+            
+
       </form>
+
+                
+      <button to="/main" className="inp-login__btn" type="submit">LOGIN</button>
+
+
+
      </div>
     )
   }
