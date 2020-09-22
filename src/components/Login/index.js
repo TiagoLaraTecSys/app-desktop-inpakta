@@ -66,7 +66,7 @@ class Login extends Component {
           <input
             type='email'
             name='email'
-            placeholder="E-mail"
+            placeholder="E-mail*"
             onChange={this.handleChange}
             className='bf-input__general'
             value={email}
@@ -76,19 +76,19 @@ class Login extends Component {
             <input
               type='password'
               name='senha'
-              placeholder="Senha"
+              placeholder="Senha*"
               onChange={this.handleChange}
               className='bf-input__general'
               value={senha}
               required
             />          
 
-            
+        <button to="/main" className="inp-login__btn" type="submit">LOGIN</button>
+
 
       </form>
 
                 
-      <button to="/main" className="inp-login__btn" type="submit">LOGIN</button>
 
 
 

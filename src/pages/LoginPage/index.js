@@ -12,7 +12,7 @@ class LoginPage extends Component {
       <div className="inp-login container">
 
         <div className="inp-login">
-          <img src={Logo} width="80" height="80"></img>
+          <img src={Logo} width="80" height="80" />
         </div>
 
         <div className="inp-login__welcome">
@@ -24,7 +24,14 @@ class LoginPage extends Component {
 
         <LoginForm />
 
-        <Link to="/cadastro">ou se cadastre :*</Link>
+
+        <div >
+          <p className="inp-login__signup_label">Não possui uma conta?</p>
+        </div>
+
+        <div>
+          <Link to="/cadastro" className="inp-login__signup">Cadastre-se</Link>          
+        </div>
       </div>
     ) 
   }

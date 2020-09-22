@@ -26,7 +26,7 @@ $color: (
 	c-gray05: #999999,
 	c-gray06: #E5E5E5,
 	c-gray07: #333333,
-	c-gray08: #F5F5F5,
+	c-gray08: #F0F0F0,
   c-gray09: #F2F2F2,
   c-gray10: #DEDEDE,
   c-gray11: #939388,
@@ -62,7 +62,7 @@ $c-brand-green-tertiary: map-get($color, 'c-brand-green-tertiary' );
 $c-white: map-get($color, 'c-white');
 $c-black: map-get($color, 'c-black');
 $c-black02: map-get($color, 'c-black02');
-$c-blue: map-get($color, 'c-blue');
+$c-blue03: map-get($color, 'c-blue03');
 $c-blue02: map-get($color, 'c-blue02');
 $c-ciano: map-get($color, 'c-ciano');
 $c-ciano-dark: map-get($color, 'c-ciano-dark');
