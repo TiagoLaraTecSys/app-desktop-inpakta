@@ -6,28 +6,57 @@
   h1 {
     margin-top: 100px;
   } 
+
+  &__logo {
+    justify-content: center;
+  }
+
+  &__welcome {
+    label {
+      color: $c-white;
+      display: block;
+      align-items: center;
+      margin: 22px;
+
+      font: {
+        size: 36px;
+        weight:$fw-regular;
+        family: visby_cfbold;
+      }
+
+    }
+  }
   
   &__form {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    margin: 0 24px;
 
     label {
-      color: $c-black;
+      color: $c-brand-blue-secondary;
       display: block;
     }
+
     input {
-      min-width: 272px;
-      font: {
-        size: 14px;
-      }
-      padding: 10px 16px;
+      min-width: 372px;
+      padding: 12px 16px;
       border: none;
-      border-radius: 5px;
-      border: 1px solid $c-gray01;
+      border-radius: 10px;
+      border: 1px solid $c-white;
       margin: 5px 0;
+      background-color: $c-gray08;
+      color: $c-gray07;
+
+      font: {
+        size: 16px;
+        color: $c-gray07;
+        weight:$fw-regular;
+        family: visby_cfbold;
+      }
+
       &:focus {
-        border-color: $c-ciano-dark;
+        border: 1px solid;
+        border-color: $c-brand-blue-primary;
       }
     }
 
@@ -39,19 +68,55 @@
   }
 
   &__btn {
-    background-color:$c-brand-blue-primary ;
-    padding: 15px;
-    border-radius: 4px;
-    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color:darken($c-brand-blue-primary, 5%);
+    margin: 0 24px;
+    padding: 6px;
+    border-radius: 64px;
+    margin: 24px 52px;
+    display: flex;
     color: $c-white;
+
     font: {
-      size: 14px;
+      size: 22px;
       weight:$fw-regular;
+      family: visby_cfbold;
     }
-    text-transform: uppercase;
+
     &:hover {
-      background-color: darken($c-ciano-dark, 5%);
+      background-color: $c-brand-blue-primary;
     }
+  }
+
+  &__signup_label{
+    color: $c-white;
+    align-items: center;
+    padding: 0;
+    margin: 48px 0 0;
+
+    font: {
+      size: 16px;
+      weight:$fw-regular;
+      family: visby_cfbold;
+    }
+  }
+
+  &__signup{
+      color: $c-white;
+      align-items: center;
+
+      font: {
+        color: $c-white;
+        size: 26px;
+        weight:$fw-regular;
+        family: visby_cfbold;
+      } 
+      
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $c-white;
+      }
   }
 
 }
