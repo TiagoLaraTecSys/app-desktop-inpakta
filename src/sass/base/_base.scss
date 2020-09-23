@@ -49,6 +49,26 @@ body, #root {
   justify-content: center;
 }
 
+.basebg{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	background-color: $c-brand-blue-secondary;
+	padding: 50px 100px;
+}
+
+.basebgcard{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	box-shadow: 40px;
+	background-color: $c-white;
+	border-radius: 20px;
+}
+
 select,
 button,
 textarea,
@@ -173,3 +193,27 @@ textarea {
   }
 
 }
+
+
+.btn_base {
+	align-items: center;
+    justify-content: center;
+    background-color:darken($c-brand-blue-secondary, 5%);
+    margin: 0 24px;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 24px 52px;
+    display: flex;
+	color: $c-white;
+	text-transform: uppercase;
+
+    font: {
+      size: 18px;
+      weight:$fw-regular;
+      family: visby_cfbold;
+    }
+
+    &:hover {
+      background-color: $c-brand-blue-secondary;
+    }
+  }

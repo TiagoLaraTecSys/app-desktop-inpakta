@@ -41,7 +41,7 @@ class Login extends Component {
         this.setState({redirect: "/cadastro"})
       }
     } else {
-      alert("deu erraddo fdp")
+      alert("error"+data)
     }
     
   }

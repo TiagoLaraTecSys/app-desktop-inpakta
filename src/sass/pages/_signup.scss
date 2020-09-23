@@ -1,0 +1,106 @@
+.inp-signup {
+
+  &__signuptitle {
+    label {
+      color: $c-black;
+      display: block;
+      align-items: center;
+
+      font: {
+        size: 22px;
+        weight:$fw-regular;
+        family: visby_cfbold;
+      }
+
+    }
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+   
+    label {
+      color: $c-black;
+      display: block;
+
+      .check {
+        max-width: rem(20);
+      }
+    }
+    input[type=text] {
+      min-width: 272px;
+      font: {
+        size: 14px;
+      }
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      border: 1px solid $c-gray01;
+      margin: 5px 0;
+      &:focus {
+        border-color: $c-ciano-dark;
+      }
+    }
+
+    a {
+      color: $c-ciano-dark;
+      text-decoration: underline;
+    }
+    
+  }
+
+
+  &__checkbox_items {
+    padding: 0 22px;
+  }
+
+  &__checkbox{
+    color: $c-black;
+    // align-items: center;
+
+    font: {
+      color: $c-black;
+      size: 14px;
+      weight:$fw-regular;
+      family: visby_cfbold;
+    } 
+    
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $c-black;
+    }
+  }
+
+  &__checkbox_label{
+    color: $c-black;
+    align-items: center;
+
+    font: {
+      color: $c-black;
+      size: 14px;
+      weight:$fw-regular;
+      family: visby_cfbold;
+    } 
+
+  }
+
+  &__back{
+    color: $c-black;
+    align-items: center;
+
+    font: {
+      color: $c-black;
+      size: 18px;
+      weight:$fw-regular;
+      family: visby_cfbold;
+    } 
+    
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $c-black;
+    }
+  }
+
+}
