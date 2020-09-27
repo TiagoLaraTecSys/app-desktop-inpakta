@@ -38,10 +38,10 @@ class Login extends Component {
       let authToken = submitUserAction(data);
       
       if (authToken !== '') {
-        this.setState({redirect: "/cadastro"})
+        this.setState({redirect: "/main"})
       }
     } else {
-      alert("deu erraddo fdp")
+      alert("deu erraddo")
     }
     
   }
@@ -82,7 +82,6 @@ class Login extends Component {
               value={senha}
               required
             />          
-
         <button to="/main" className="inp-login__btn" type="submit">LOGIN</button>
 
 
@@ -97,33 +96,3 @@ class Login extends Component {
   }
 }
 export default Login
-
-// const UserFormFun = props =>{
-
-//   const { handleSubmit } = props
-  
-//   const submit = (data, submitUserAction) => {submitUserAction(data)}
-//   return (
-//     <div className="inp-login">
-//       <form action="/componentList" className="inp-login__form" onSubmit={handleSubmit((fields) => submit(fields, submitUserAction))}>
-//           <label>Email</label>
-//           <Field type="text" component="input" name="email"/>
-//           <label>Senha</label>
-//           <Field type="password" component="input" name="senha"/>
-//           <button to="/componentList" className="inp-login__btn" type="submit">Submit</button>
-//           <Link to="/cadastro" onClick={console.log('olá')}>ou se cadastre</Link>
-//       </form>
-//     </div>
-//   );
-// }
-
-// const UserForm = (reduxForm({
-//   form: "formUser"
-// }))(UserFormFun)
-
-// const mapStateToProps = state => ({
-
-
-// })
-
-// export default connect(mapStateToProps, {submitUserAction})(UserForm)
