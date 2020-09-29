@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import IconEngrenagem from '../../icons/icon-engrenagem.svg'
+import { Link } from 'react-router-dom';
 
 class HeaderHome extends Component { 
 
@@ -23,7 +24,10 @@ class HeaderHome extends Component {
               <img src={IconEngrenagem}/>  
             </div>
             <div>
-              <button className="header-home__sair" >sair</button>
+              <Link
+                to='/login'
+                className="header-home__sair"
+              >sair</Link>
             </div>
           </div>
         </nav>
