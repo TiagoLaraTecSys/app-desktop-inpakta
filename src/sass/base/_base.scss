@@ -37,6 +37,10 @@ body {
 	overflow-x: hidden;
 }
 
+body, #root {
+   height: 90vh;
+}
+
 select,
 button,
 textarea,

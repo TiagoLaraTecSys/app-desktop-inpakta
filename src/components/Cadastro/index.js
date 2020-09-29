@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {submitUserAction} from '../../services/UserServices/UserCadastro'
+import { submitUserAction } from '../../services/UserServices/UserCadastro'
+import Header from '../Header'
 
 class Cadastro extends Component {
   constructor() {
@@ -50,6 +51,7 @@ class Cadastro extends Component {
 
     return (
       <div className="cadastro">
+        <Header />
         <form action="/componentList" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>
             Nome

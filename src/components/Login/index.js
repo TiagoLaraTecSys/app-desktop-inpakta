@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React, { Component, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import {submitUserAction} from '../../services/UserServices/UserLogin'
 import {listAllDbProperties} from '../../services/UserServices/DBServices/ListAllDbProperties'
 import StoreContext from '../Store/Context'
 import { useHistory } from 'react-router-dom'
+=======
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import {submitUserAction} from '../../services/UserServices/UserLogin'
+import { listAllDbProperties } from '../../services/UserServices/DBServices/ListAllDbProperties'
+import Header from '../Header'
+>>>>>>> d9a0c5dd349ebad83724a9c819e0bfec3ad71896
 
 class Login extends Component {
 
@@ -57,6 +65,7 @@ class Login extends Component {
 
     return (
       <div className="inp-login">
+       <Header/> 
        <form action="/componentList" className="inp-login__form" onSubmit={this.handleSubmit}>
           <label>
             Email

@@ -10,9 +10,8 @@ export const submitUserAction = (data) => {
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(json => {console.log(json)
-
+      .then(function (response){
+      console.log(response);
     })
-    .catch(reason => {console.log(reason + ' Ueee ')})
+  
 }

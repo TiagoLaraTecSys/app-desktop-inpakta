@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import { insertDbProperties } from '../../services/UserServices/DBServices/InsertDbProperties'
+import Header from '../Header'
 
 class CadastroInfos extends Component {
   constructor() {
@@ -33,7 +34,7 @@ class CadastroInfos extends Component {
 
     if (data !== '') {
       
-      submitUserAction(data)
+      insertDbProperties(data)
         
     } else {
       alert("deu erraddo fdp")
@@ -52,6 +53,7 @@ class CadastroInfos extends Component {
 
     return (
       <div className="cadastro">
+        <Header />
         <form action="/componentList" className="cadastro__form" onSubmit={this.handleSubmit}>
           <label>
             Nome
