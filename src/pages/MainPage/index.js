@@ -14,10 +14,10 @@ class MainPage extends Component {
   }
   
   setUser() {
-    let token = localStorage.getItem('client-token');
+    let token = localStorage.getItem('authToken');
     let nome = localStorage.getItem('userName');
     getUserInfos(token);
-    console.log(nome);
+
     this.setState({ nome: nome})
   }
 

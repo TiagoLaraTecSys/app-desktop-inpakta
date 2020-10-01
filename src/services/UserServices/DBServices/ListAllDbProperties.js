@@ -2,7 +2,7 @@
 export const listAllDbProperties = function() {
 
   let url = 'https://inpaktaservice.herokuapp.com/dbproperties/all';
-  let token = localStorage.getItem('client-token');
+  let token = localStorage.getItem('authToken');
   console.log(token);
     fetch(url,{
         method: "GET",

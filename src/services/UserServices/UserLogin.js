@@ -15,7 +15,7 @@ export const submitUserAction = (data) => {
     .then(response => response.json())
     .then(json => {
       console.log(json.authToken)
-      localStorage.setItem('client-token',json.authToken.replace(':',' '))
+      localStorage.setItem('authToken',json.authToken.replace(':',' '))
       return json.authToken
     })
     .catch(

@@ -46,6 +46,10 @@ class Login extends Component {
     
   }
 
+  componentDidMount() {
+    localStorage.setItem('authToken', '');
+    localStorage.setItem('userName', '');
+  }
   
   render() {
     const {

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 class HeaderHome extends Component { 
 
+
   render() {
     return (
       <div className="header-home">

@@ -11,6 +11,6 @@ export const getUserInfos = (token) => {
   })
     .then(response => response.json())
     .then(json => {
-    localStorage.setItem('unserName', json.nome)
+    localStorage.setItem('userName', json.nome)
   })
 } 
