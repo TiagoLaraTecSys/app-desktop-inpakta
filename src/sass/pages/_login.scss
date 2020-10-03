@@ -119,4 +119,17 @@
       }
   }
 
+  .login-error{
+    display: none;
+
+    &_fail {
+      display: block;
+      p {
+        color: #cc0000;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  }
+
 }

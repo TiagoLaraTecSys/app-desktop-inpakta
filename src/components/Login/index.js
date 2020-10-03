@@ -10,6 +10,7 @@ class Login extends Component {
     super();
     this.state = {
       redirect: '',
+      loginFail: '',
       data: this.defaultData,
     }
 
@@ -52,19 +53,29 @@ class Login extends Component {
               console.log(json)
               token = json.authToken
               localStorage.setItem('authToken', token.replace(':', ' '))
-              this.setState({redirect : '/main'})
+              this.setState({ redirect: '/main' })
+              this.setState({loginFail : ''})
             })
+        } else {
+          this.setState({loginFail : '_fail'})
         }
       })
     }
   }
 
+  componentDidMount() {
+    localStorage.setItem('authToken', '')
+    localStorage.setItem('userName', '')
+  }
+
   render() {
+    const status = this.state.loginFail;
     const {
       data: {
         senha,
         email
       },
+      
     } = this.state;
 
     if (this.state.redirect !== '') {
@@ -93,15 +104,12 @@ class Login extends Component {
             className='bf-input__general'
             value={senha}
             required
-          />
+          /> 
+          <div className={'login-error' + status} >
+            <p>Usuário ou senha incorretos</p>
+          </div>
           <button to="/main" className="inp-login__btn" type="submit">LOGIN</button>
-
-
         </form>
-
-
-
-
 
       </div>
     )

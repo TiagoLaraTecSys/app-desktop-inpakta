@@ -26,7 +26,7 @@ ReactDOM.render(
       <Route path="/login" component={Login} exact></Route>
       <Route path="/cadastro" component={Cadastro}></Route>
       <Route path="/cadastrodb" component={DbProperties}></Route>
-      <PrivateRoute  path="/main" component={MainPage}></PrivateRoute>
+      <Route  path="/main" component={MainPage}></Route>
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
