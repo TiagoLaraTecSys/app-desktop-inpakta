@@ -7,6 +7,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Login from './pages/LoginPage'
 import DbProperties from './pages/SignDataInfoPage';
 import MainPage from './pages/MainPage';
+import PrivateRoute from './components/PrivateRoute'
 
 function Pagina404(){
   return(
@@ -25,7 +26,7 @@ ReactDOM.render(
       <Route path="/login" component={Login} exact></Route>
       <Route path="/cadastro" component={Cadastro}></Route>
       <Route path="/cadastrodb" component={DbProperties}></Route>
-      <Route path="/main" component={MainPage}></Route>
+      <PrivateRoute  path="/main" component={MainPage}></PrivateRoute>
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')

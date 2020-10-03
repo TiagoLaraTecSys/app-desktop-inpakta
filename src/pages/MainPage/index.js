@@ -5,39 +5,15 @@ import UserWelcome from '../../components/MainPage/UserWelcome'
 import {getUserInfos} from '../../services/UserServices/GetUserInfos'
 
 class MainPage extends Component { 
-  constructor() {
-    super();
-    this.state = {
-      nome: ''
-    }
-
-  }
-  
-  setUser() {
-    let token = localStorage.getItem('authToken');
-    let nome = localStorage.getItem('userName');
-    getUserInfos(token);
-
-    this.setState({ nome: nome})
-  }
-
-  componentDidMount() {
-    this.setUser();
-  }
-  componentDidUpdate() {
-
-  }
 
   render() {
-    const nome = this.state.nome;
+
     return (
       <div className="main-page container">
        
         <div className="main-page__wrapper">
           <HeaderHome />
-          <UserWelcome
-            nome={nome}
-          />
+          <UserWelcome/>
           <DbList />
         </div>
       </div>
